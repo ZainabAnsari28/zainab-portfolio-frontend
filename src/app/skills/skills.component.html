@@ -1,0 +1,34 @@
+<div class="skills-section mt-5" data-aos="fade-up">
+  <h3><span>My</span> Skills</h3>
+  <h4>From frontend finesse to backend brilliance</h4>
+  <h6>I bring a well-rounded toolkit built for real-world impact. Every tool, every skill — chosen with purpose.</h6>
+  <p>Code. Collaborate. Create.</p>
+  <div class="row g-4 d-flex flex-wrap">
+    <div class="col-12 col-md-6 d-flex" *ngFor="let category of skillsByCategory">
+      <div class="category-card w-100">
+        <h5>{{ category.category }}</h5>
+        <div class="row">
+          <div class="col-6 mb-3" *ngFor="let skill of category.skills">
+            <div class="skill-item d-flex align-items-center">
+              <img [src]="skill.icon" [alt]="skill.name" class="skill-icon me-2">
+              <div class="w-100">
+                <div class="d-flex justify-content-between">
+                  <label>{{ skill.name }}</label>
+                  <span class="percentage">{{ skill.level }}%</span>
+                </div>
+                <div class="custom-progress">
+  <div class="custom-fill" [ngStyle]="{ width: skill.level + '%' }">
+    {{ skill.level }}%
+  </div>
+</div>
+                <div class="remark-text text-end" [ngClass]="getRemarkClass(skill.level)">
+                  {{ getSkillRemark(skill.level) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

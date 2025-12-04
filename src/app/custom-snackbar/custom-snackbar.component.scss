@@ -1,0 +1,77 @@
+.custom-snackbar {
+  background: linear-gradient(to right, #3e4095, #00dff7);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 300px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.snackbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.snackbar-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
+
+.snackbar-message {
+  flex: 1;
+}
+
+.snackbar-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.snackbar-button img {
+  width: 30px;
+  height: 30px;
+}
+
+::ng-deep .mat-snack-bar-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  overflow: visible !important; 
+}
+
+
+::ng-deep .no-background-snackbar {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
+@media (min-width: 768px) {
+  .custom-snackbar {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-snackbar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+  }
+}
+
+

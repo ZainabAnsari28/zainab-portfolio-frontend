@@ -1,0 +1,131 @@
+.header {
+  background: linear-gradient(70deg, #fff, #abd1d6, #fff, #abd1d6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 997;
+  padding: 1rem 1.5rem;
+}
+
+// .header {
+//   position: sticky;
+//   top: 0;
+//   z-index: 2000; /* Increase if needed */
+//   background: linear-gradient(70deg, #fff, #abd1d6, #fff, #abd1d6);
+//   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+//   padding: 1rem 1.5rem;
+// }      
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  min-height: 70px; 
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navmenu li {
+  padding: 10px 12px;
+}
+
+.navmenu-mobile {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.navmenu-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navmenu-mobile li {
+  padding: 10px 0;
+}
+
+
+.navmenu a {
+  color: #0072ff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.navmenu-mobile a {
+  color: #0072ff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  gap: 10px !important;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  padding-left: 120px;
+  // padding-right: 80px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  text-align: center !important;
+}
+
+.navmenu a:hover,
+.navmenu-mobile a:hover {
+  background: linear-gradient(to right, #fff, #abd1d6);
+  color: #0072ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navmenu a img,
+.navmenu-mobile a img {
+  transition: transform 0.3s ease;
+}
+
+.navmenu a:hover img,
+.navmenu-mobile a:hover img {
+  transform: scale(1.1);
+}
+
+.navmenu .active,
+.navmenu-mobile .active {
+  background: linear-gradient(to right, #fff, #abd1d6);
+  color: #0072ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+
+

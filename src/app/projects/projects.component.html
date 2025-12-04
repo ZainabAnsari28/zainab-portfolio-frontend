@@ -1,0 +1,61 @@
+<div class="project-page-wrapper">
+<div class="project-section container mt-5">
+  <h2><span>My</span> Projects</h2>
+  <h5>From solving real-world business challenges to building passion-driven applications — my projects reflect not just what I know, but how I apply it.</h5>
+  <div class="text-center mb-4">
+    <button class="btn me-2" [ngClass]="{'btn-dark': activeFilter === 'all','btn-outline-dark': activeFilter !== 'all'}" (click)="filterProjects('all')">All</button>
+    <button class="btn me-2" [ngClass]="{'btn-primary': activeFilter === 'company','btn-outline-primary': activeFilter !== 'company'}" (click)="filterProjects('company')">Company</button>
+    <button class="btn" [ngClass]="{'btn-success': activeFilter === 'self','btn-outline-success': activeFilter !== 'self'}" (click)="filterProjects('self')">Self</button>
+</div>
+<div class="company-projects"  *ngIf="activeFilter === 'all' || activeFilter === 'company'">
+  <h3 class="section-title text-center mb-5">Company Projects</h3>
+  <h5>These projects taught me how to deliver value in fast-paced, high-stakes environments.</h5>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" *ngFor="let project of companyProjects">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+  <div class="row">
+    <div class="col-12 mb-2">
+      <h4 class="project-title">{{ project.projectName }}</h4>
+      <h6 class="text-muted">Application: {{ project.applicationName }}</h6>
+    </div>
+    <div class="col-md-6">
+      <h5><img width="25" height="25" src="https://img.icons8.com/lollipop/48/task.png" alt="task"/> Responsibilities:</h5>
+      <ul>
+        <li *ngFor="let r of project.responsibilities">{{ r }}</li>
+      </ul>
+    </div>
+    <div class="col-md-6">   
+<h5><img width="22" height="22" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/> Key Achievements:</h5>
+      <ul>
+        <li *ngFor="let a of project.achievements">{{ a }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="self-projects"  *ngIf="activeFilter === 'all' || activeFilter === 'self'">
+ <h3 class="section-title text-center mb-5">Self Projects</h3>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let project of selfProjects">
+    <div class="card h-100 shadow-sm">
+      <img [src]="project.image" class="card-img-top" alt="{{ project.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p><img width="25" height="25" src="https://img.icons8.com/emoji/48/rocket-emji.png" alt="rocket-emji"/><strong>Tech Used:</strong> {{ project.tech }}</p>
+        <p><img width="22" height="22" src="https://img.icons8.com/emoji/48/star-emoji.png" alt="star-emoji"/><strong>Features:</strong> {{ project.features }}</p>
+        <p>{{ project.description }}</p>
+      </div>
+      <div class="card-footer text-center">
+        <a class="btn btn-outline-primary me-2" [href]="project.github" target="_blank">GitHub</a>
+        <a class="btn btn-outline-success" [href]="project.demo" target="_blank">Live Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>

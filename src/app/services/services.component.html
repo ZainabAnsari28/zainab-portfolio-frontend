@@ -1,0 +1,27 @@
+<div class="services-section">
+  <div class="overlay"></div>
+  <h2 class="text-center mb-4">My Services</h2>
+  <p class="text-center intro-text">
+    I specialize in end-to-end web development solutions tailored to your business needs. From crafting responsive
+    frontends to building robust backend systems, I ensure seamless performance and user experience.
+  </p>
+  <div class="row service-row">
+  <div class="col-md-4 mb-4 d-flex align-items-stretch" *ngFor="let service of services">
+  <div class="card-wrapper">
+    <div class="icon-wrapper">
+      <mat-icon>{{ service.icon }}</mat-icon>
+    </div>
+    <mat-card class="service-card">
+      <mat-card-title>{{ service.title }}</mat-card-title>
+      <mat-card-subtitle>{{ service.tagline }}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ service.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+</div>
+
+
+</div>

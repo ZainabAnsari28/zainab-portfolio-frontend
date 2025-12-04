@@ -1,0 +1,127 @@
+.services-section {
+  position: relative;
+  background-image: url("/assets/images/ServicesBack.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  
+  .overlay {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6); // dark overlay for readability
+    z-index: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .intro-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+.service-card {
+  padding-top: 40px; // space for icon
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  mat-card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  mat-card-subtitle {
+    font-size: 0.95rem;
+    color: #fff; 
+    font-weight: bold;
+    text-shadow:
+    0 0 5px #e14899,
+    0 0 10px #e14899,
+    0 0 20px #e14899,
+    0 0 40px #9f336c; 
+  animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px #e14899,
+      0 0 10px #e14899,
+      0 0 20px #e14899,
+      0 0 40px #9f336c;
+  }
+  to {
+    text-shadow:
+      0 0 10px #e14899,
+      0 0 20px #e14899,
+      0 0 30px #e14899,
+      0 0 50px #9f336c;
+  }
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px; 
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: -30px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #8a6947;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+
+  mat-icon {
+    color: #fff;
+    font-size: 28px;
+  }
+}
+
+
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-md-4 {
+    display: flex;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+}

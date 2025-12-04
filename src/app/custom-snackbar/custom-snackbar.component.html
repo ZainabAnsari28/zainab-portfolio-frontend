@@ -1,0 +1,24 @@
+<div class="custom-snackbar">
+  <div class="snackbar-row">
+    <img
+      width="30"
+      height="30"
+      [src]="type === 'success'
+        ? 'https://img.icons8.com/3d-fluency/94/checked-checkbox.png'
+        : 'https://img.icons8.com/fluency/48/high-risk.png'"
+      alt="status-icon"
+    />
+    <span> {{ message }} </span>
+    <button class="snackbar-button" (click)="dismiss()">
+      <img
+        width="30"
+        height="30"
+        [src]="type === 'success'
+          ? 'https://img.icons8.com/stickers/50/facebook-like.png'
+          : 'https://img.icons8.com/stickers/100/thumbs-down-skin-type-1.png'"
+        alt="action-icon"
+      />
+    </button>
+  </div>
+</div>
+

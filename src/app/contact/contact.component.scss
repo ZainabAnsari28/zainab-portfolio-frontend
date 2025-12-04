@@ -1,0 +1,240 @@
+.contact-page-wrapper {
+ background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.contact-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contact-section h3 {
+  text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #3f51b5;
+  span {
+        font-weight: 800;
+        font-size: 32px;
+        background: linear-gradient(90deg, #3e4095, #00dff7, #e14899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  // color: #fff;
+}
+
+.highlight-box {
+  background: linear-gradient(70deg, #fff, #abd1d6, #fff, #abd1d6);
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+  color: #2c3e50;
+}
+
+.highlight-row {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.highlight-item strong {
+  font-size: 22px;
+  color: #e14899;
+}
+
+mat-form-field {
+  width: 100%;
+  background-color: transparent !important;
+}
+input.mat-input-element,
+textarea.mat-input-element {
+  background-color: #fff !important;
+  color: #2c3e50 !important;
+  opacity: 1 !important; /* 👈 This is the key fix */
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.robot-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+mat-label {
+  color: #3f51b5 !important; /* Theme color for label */
+  font-weight: 600;
+}
+
+input.mat-input-element:focus,
+textarea.mat-input-element:focus {
+  border-color: #e14899;
+  box-shadow: 0 0 5px rgba(225, 72, 153, 0.5);
+  outline: none;
+}
+
+form.card {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+
+   h3 span {
+      background: linear-gradient(50deg, #fff, #3e4095, #00dff7, #e14899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 32px;
+    font-weight: 700;
+    }
+}
+
+form h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3e4095;
+}
+  button {
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #d13c85;
+}
+.robot-highlight-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+
+  .robot-wrapper {
+    flex: 1;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .highlight-row {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section .row {
+    flex-direction: column;
+  }
+
+  .contact-section .col-md-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .highlight-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
+.robot-wrapper {
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+
+    img {
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+
+
+  form.card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .text-center.mb-4.d-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+.mobile-left {
+    order: 1;
+  }
+  .mobile-right {
+    order: 2;
+  }
+  .d-flex.flex-column.flex-md-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section h3 {
+    font-size: 24px;
+  }
+
+  .contact-section h5 {
+    font-size: 16px;
+  }
+
+  form h3 {
+    font-size: 20px;
+  }
+
+  .highlight-item strong {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  form.card {
+    padding: 15px;
+  }
+
+  mat-form-field {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+.robot-wrapper img {
+    max-width: 160px;
+    margin: auto;
+    display: block;
+  }
+}
+
+
+
+
+
+
+

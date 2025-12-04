@@ -1,0 +1,55 @@
+.footer-section {
+  background: linear-gradient(70deg, #fff, #abd1d6, #fff, #abd1d6);
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-title .name {
+  background: linear-gradient(50deg, #3e4095, #00dff7, #e14899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.footer-icons img {
+  transition: transform 0.3s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-nav li {
+  margin-bottom: 6px;
+}
+
+.footer-nav a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.lastline {
+  background: linear-gradient(to right, #fff, #abd1d6);
+  border-radius: 5px;
+}

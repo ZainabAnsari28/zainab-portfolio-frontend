@@ -1,0 +1,62 @@
+<div class="particle-background position-absolute w-100 h-100">
+  <div
+    class="particle position-absolute"
+    *ngFor="let p of particles"
+    [ngStyle]="{ top: p.top, left: p.left }"
+    [ngClass]="p.animation"
+  ></div>
+</div>
+
+<div class="home-container container-fluid position-relative text-center text-white py-5">
+  <!-- Video Play Section -->
+  <div class="video-play-wrapper d-flex flex-column align-items-center justify-content-center mb-4">
+    <div class="video-play-button mb-2" (click)="openVideoPopup()">
+    <img width="50" height="50" src="https://img.icons8.com/fluency-systems-filled/50/FFFFFF/play.png" alt="play"/></div>
+    <div class="meet-zainab-text">Meet Zainab</div>
+  </div>
+
+<div class="video-popup" *ngIf="showVideo">
+    <div class="video-overlay position-fixed w-100 h-100 top-0 start-0 bg-dark bg-opacity-75" (click)="closeVideoPopup()"></div>
+      <div class="video-content position-fixed top-50 start-50 translate-middle bg-black p-3 rounded shadow-lg" style="max-width: 90vw; max-height: 90vh;">
+        <button class="close-btn" (click)="closeVideoPopup()">✖</button>
+
+        <video width="100%" controls autoplay>
+          <source src="/assets/video/Meet Zainab2" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <img src="/assets/images/ZainabBack.png" class="full-bg" alt="Background" />
+
+  <div class="text-section container px-3 px-md-5">
+    <h4>
+      <img width="16" height="16" src="https://img.icons8.com/small/16/FFFFFF/sparkling.png" alt="sparkling"/>
+      Available for new opportunities
+    </h4>
+    <h1>Hello,</h1>
+    <h1>I'm  
+      
+      <div class="name-frame d-inline-block">
+        <span class="name">Zainab Ansari</span>
+      </div>
+    </h1>
+    
+    <h2><span class="typewriter-text"></span></h2>
+
+    
+<div class="resume-download d-flex flex-column flex-md-row gap-3 mt-4">
+      <a routerLink="/projects">
+        <button class="download-btn view-work-btn">
+            <img width="25" height="25" src="https://img.icons8.com/deco-glyph/50/FFFFFF/visible.png" alt="visible"/>
+            View My Work
+          </button>
+        </a>
+      <a href="/assets/CV/CV_ZainabAnsari.pdf" download>
+        <button class="download-btn">
+        <img width="25" height="25" src="https://img.icons8.com/color/48/download--v1.png" alt="download--v1"/>
+          Download Resume
+        </button>
+      </a>      
+    </div>
+  </div>
+</div>

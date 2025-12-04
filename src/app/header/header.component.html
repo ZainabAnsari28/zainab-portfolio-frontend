@@ -1,0 +1,96 @@
+<header class="header">
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-6 col-md-3">
+        <a routerLink="/" class="logo d-flex align-items-center me-auto me-xl-0">
+          <img src="assets/images/ZainabLogo.png" alt="Zainab Logo" class="logo-img" />
+        </a>
+      </div>
+      <div class="col-6 col-md-9 d-flex justify-content-end align-items-center">
+        <nav class="navmenu d-none d-md-block">
+          <ul class="d-flex flex-wrap justify-content-end">
+
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <span class="nav-text">Home </span>
+            <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/cda780/home.png" alt="home"/>  
+          </a>
+          </li>
+          <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <span class="nav-text">About </span>
+          <img width="25" height="25" src="https://img.icons8.com/glyph-neue/64/cda780/about--v1.png" alt="about--v1"/>
+          </a>
+          </li>
+
+          <li><a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span>Skills </span>
+          <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/cda780/persuasion-skills.png" alt="persuasion-skills"/>
+          </a></li>
+
+          <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-text">Services </span>
+          <img width="26" height="26" src="https://img.icons8.com/fluency-systems-filled/50/cda780/administrative-tools.png" alt="administrative-tools"/>
+          </a></li>
+
+          <li><a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-text">Projects </span>
+          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/cda780/group-of-projects.png" alt="group-of-projects"/>
+          </a></li>
+
+          <li><a routerLink="/experienced" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-text">Expertise </span>
+          <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/cda780/customer-insight.png" alt="customer-insight"/>
+          </a></li>
+
+          <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-text">Contact </span>
+          <img width="23" height="23" src="https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/cda780/external-contact-social-media-basic-1-sbts2018-mixed-sbts2018.png" alt="external-contact-social-media-basic-1-sbts2018-mixed-sbts2018"/>
+          </a></li>
+        </ul>
+        </nav>
+        <button class="btn d-md-none" (click)="toggleMobileMenu()">
+          <ng-container *ngIf="!isMobileMenuOpen; else closeIcon">
+            <img width="25" height="25" src="https://img.icons8.com/fluency/48/menu.png" alt="menu"/>
+          </ng-container>
+          <ng-template #closeIcon>
+            <img width="30" height="30" src="https://img.icons8.com/arcade/64/multiply.png" alt="multiply"/>
+          </ng-template>        
+          </button>
+      </div>
+    </div>  
+    <nav *ngIf="isMobileMenuOpen" class="navmenu-mobile d-md-none mt-3">
+      <ul class="flex-column text-center">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+          <span class="nav-text">Home </span>
+            <img width="28" height="28" src="https://img.icons8.com/sf-black-filled/64/cda780/home.png" alt="home"/>  
+          </a>
+          </li>
+          <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+          <span class="nav-text">About </span>
+          <img width="25" height="25" src="https://img.icons8.com/glyph-neue/64/cda780/about--v1.png" alt="about--v1"/>
+          </a>
+          </li>
+
+          <li><a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+            <span class="nav-text">Skills </span>
+          <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/cda780/persuasion-skills.png" alt="persuasion-skills"/>
+          </a></li>
+
+          <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+            <span class="nav-text">Services </span>
+          <img width="26" height="26" src="https://img.icons8.com/fluency-systems-filled/50/cda780/administrative-tools.png" alt="administrative-tools"/>
+          </a></li>
+
+          <li><a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+            <span class="nav-text">Projects </span>
+          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/cda780/group-of-projects.png" alt="group-of-projects"/>
+          </a></li>
+
+          <li><a routerLink="/experienced" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+            <span class="nav-text">Expertise </span>
+          <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/cda780/customer-insight.png" alt="customer-insight"/>
+          </a></li>
+
+          <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()">
+            <span class="nav-text">Contact </span>
+          <img width="23" height="23" src="https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/cda780/external-contact-social-media-basic-1-sbts2018-mixed-sbts2018.png" alt="external-contact-social-media-basic-1-sbts2018-mixed-sbts2018"/>
+          </a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+

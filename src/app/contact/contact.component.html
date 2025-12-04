@@ -1,0 +1,103 @@
+<div class="contact-page-wrapper">
+<div class="contact-section container mt-5">
+  <h3 class="text-center mb-4">Get In <span>Touch</span></h3>
+  <h5 class="text-center mb-4">Every pixel, every line of code tells a story. Let's collaborate and craft something that not only works — but wows.</h5>
+  <div class="text-center mb-4 d-flex justify-content-center gap-3 flex-wrap">
+    <div>Ready to build something impactful? <img width="30" height="30" src="https://img.icons8.com/fluency/48/get-help.png" alt="get-help"/> Let's Talk</div>
+    <div><img width="30" height="30" src="https://img.icons8.com/emoji/48/rocket-emji.png" alt="rocket-emji" class="float-icon icon5"/> Start Your Project</div>
+    <div><img width="30" height="30" src="https://img.icons8.com/fluency/48/laptop-coding.png" alt="laptop-coding" class="float-icon icon4" /> Code With Zainab</div>
+  </div>
+<div class="row align-items-start">
+  <!-- Left Column -->
+  <div class="col-md-6">
+    <!-- Desktop Layout (visible only on md and above) -->
+    <div class="d-flex flex-column flex-md-row align-items-start gap-3 d-none d-md-flex">
+      <div class="contact-info p-3 flex-grow-1">
+        <h5 class="mb-3">Let's Start a Conversation</h5>
+        <div class="mb-2 d-flex align-items-center gap-2">
+         <img width="30" height="30" src="https://img.icons8.com/emoji/48/e-mail.png" alt="e-mail"/>
+          <strong>Email:</strong> zainuuansari&#64;gmail.com
+        </div>
+        <div class="mb-2 d-flex align-items-center gap-2">
+          <img width="30" height="30" src="https://img.icons8.com/cute-clipart/64/ringing-phone.png" alt="ringing-phone"/>
+          <strong>Phone:</strong> +91-6263076709
+        </div>
+        <div class="mb-2 d-flex align-items-center gap-2">
+         <img width="30" height="30" src="https://img.icons8.com/color/48/github--v1.png" alt="github--v1"/>
+          <strong>Github:</strong> github.com/ZainabAnsari28
+        </div>
+        <div class="mb-2 d-flex align-items-center gap-2">
+          <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/linkedin--v2.png" alt="linkedin--v2"/>
+          <strong>LinkedIn:</strong> linkedin.com/in/zainabansari28
+        </div>
+        <div class="mb-2 d-flex align-items-center gap-2">
+          <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/place-marker.png" alt="place-marker"/>
+          <strong>Location:</strong> Mumbai, India
+        </div>
+      </div>
+      <div class="robot-wrapper">
+        <img src="/assets/images/Robot.png" alt="Robot" class="img-fluid" />
+      </div>
+    </div>
+
+    <!-- Mobile Layout (visible only on small screens) -->
+    <div class="robot-highlight-wrapper d-flex d-md-none" *ngIf="isMobile">
+      <div class="robot-wrapper">
+        <img src="/assets/images/Robot.png" alt="Robot" class="img-fluid" />
+      </div>
+      <div class="mt-4">
+        <h4>Why work with me?</h4>
+        <div class="highlight-row">
+          <div class="highlight-item"><strong>100%</strong> Client Satisfaction</div>
+          <div class="highlight-item"><strong>24h</strong> Response Time</div>
+          <div class="highlight-item"><strong>2+</strong> Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shared Section (visible on all views) -->
+    <div class="contact-info p-3">
+      <div class="highlight-box mt-3">
+        <img width="20" height="20" src="https://img.icons8.com/fluency/48/calendar.png" alt="calendar"/>
+        <strong> Response Time</strong>
+        <blockquote class="mt-2">
+          Your message is important to me. I typically reply within 24 hours. For urgent matters, include 'URGENT' in your subject line.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="col-md-6">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="card p-4 shadow-sm">
+      <h3> Drop a <span> Message!</span></h3>
+
+      <mat-form-field appearance="outline" class="mb-3 area">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required placeholder="Enter your full name" />
+        <mat-error *ngIf="contactForm.get('name')?.invalid">Name is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mb-3 area">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required placeholder="Enter your email address" />
+        <mat-error *ngIf="contactForm.get('email')?.invalid">Valid email is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mb-3 area">
+        <mat-label>Message</mat-label>
+        <textarea matInput formControlName="message" rows="5" required placeholder="Tell me about your project or how I can help you"></textarea>
+        <mat-error *ngIf="contactForm.get('message')?.invalid">Message is required</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">
+       <img width="20" height="20" src="https://img.icons8.com/arcade/64/filled-sent.png" alt="filled-sent"/>
+        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+      </button>
+      <p class="mt-2">
+       <img width="20" height="20" src="https://img.icons8.com/fluency/48/high-importance.png" alt="high-importance"/>
+        Your privacy matters. I'll only use your details to respond to your inquiry — no spam, ever
+      </p>
+    </form>
+  </div>
+</div></div>
